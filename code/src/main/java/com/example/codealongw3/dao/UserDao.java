@@ -39,7 +39,7 @@ public class UserDao {
         Optional<CustomUser> user = this.userRepository.findById(id);
 
         if(user.isPresent()){
-            user.get().setEmail(userDTO.email);
+            user.get().setEmail(userDTO.UserEmail);
             user.get().setPassword(userDTO.password);
             user.get().setVoornaam(userDTO.voornaam);
             user.get().setTussenvoegsel(userDTO.tussenvoegsel);
@@ -57,7 +57,7 @@ public class UserDao {
 
     @Transactional
     public void createUser(UserDTO userDTO){
-        CustomUser user = new CustomUser(userDTO.email, userDTO.password, userDTO.voornaam, userDTO.tussenvoegsel, userDTO.achternaam, userDTO.straat, userDTO.huisnummer, userDTO.postcode, "ROLE: USER");
+        CustomUser user = new CustomUser(userDTO.UserEmail, userDTO.password, userDTO.voornaam, userDTO.tussenvoegsel, userDTO.achternaam, userDTO.straat, userDTO.huisnummer, userDTO.postcode, "ROLE: USER");
         this.userRepository.save(user);
     }
 

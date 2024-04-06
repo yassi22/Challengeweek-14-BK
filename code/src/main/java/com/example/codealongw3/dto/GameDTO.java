@@ -8,15 +8,15 @@ import jakarta.validation.constraints.NotNull;
 
 
 public class GameDTO {
-    public String title;
+    public String name;
     public String description;
 
-    public String imageurl;
+    public String imageUrl;
     public String developer;
     public String publisher;
     public String releaseDate;
     public double price;
-    public int amount;
+    public int stock;
     public String os;
     public String processor;
     public String memory;
@@ -24,15 +24,15 @@ public class GameDTO {
     public String sound_card;
 
 
-    public GameDTO(String title, String description,String imageurl, String developer, String publisher, String releaseDate, double price, int amount, String os, String processor, String memory, String graphics, String sound_card){
-        this.title = title;
+    public GameDTO(String name, String description,String imageUrl, String developer, String publisher, String releaseDate, double price, int stock, String os, String processor, String memory, String graphics, String sound_card){
+        this.name = name;
         this.description = description;
-        this.imageurl = imageurl;
+        this.imageUrl = imageUrl;
         this.developer = developer;
         this.publisher = publisher;
         this.releaseDate = releaseDate;
         this.price = price;
-        this.amount = amount;
+        this.stock = stock;
         this.os  = os;
         this.processor = processor;
         this.memory = memory;

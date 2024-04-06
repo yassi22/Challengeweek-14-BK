@@ -54,7 +54,7 @@ public class OrderDao {
 
     @Transactional
     public void createOrder(OrderDTO orderDTO) {
-        List<Game> gameList = gameDao.getGames(orderDTO.game_ids);
+        List<Game> gameList = gameDao.getGames(orderDTO.product_id);
 
         Order order = new Order(gameService.makeTitle(gameList), gameService.calculatePrice(gameList), LocalDateTime.now(), gameList);
         order.setUser(userRepositor.findByEmail(orderDTO.user_email));
@@ -66,7 +66,7 @@ public class OrderDao {
 
     public void updateOrder(OrderDTO orderDTO, Long id) {
         Optional<Order> order = this.orderRepository.findById(id);
-        List<Game> gameList = gameDao.getGames(orderDTO.game_ids);
+        List<Game> gameList = gameDao.getGames(orderDTO.product_id);
         if (order.isPresent()) {
             order.get().setGames(gameList);
             order.get().setOrderTitle(gameService.makeTitle(gameList));

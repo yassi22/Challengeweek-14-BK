@@ -2,7 +2,7 @@ package com.example.codealongw3.dto;
 
 public class UserDTO {
 
-    public String email;
+    public String UserEmail;
     public String password;
 
     public String voornaam;
@@ -18,7 +18,7 @@ public class UserDTO {
     public String postcode;
 
     public UserDTO(String email, String password, String voornaam, String tussenvoegsel, String achternaam, String straat, int huisnummer, String postcode) {
-        this.email = email;
+        this.UserEmail = email;
         this.password = password;
         this.voornaam = voornaam;
         this.tussenvoegsel = tussenvoegsel;

@@ -6,12 +6,12 @@ import java.time.LocalDateTime;
 import java.util.List;
 public class OrderDTO {
 
-    public List<Long> game_ids;
+    public List<Long> product_id;
 
     public String user_email;
 
-    public OrderDTO(List<Long> game_ids, String user_email) {
-        this.game_ids = game_ids;
+    public OrderDTO(List<Long> product_id, String user_email) {
+        this.product_id = product_id;
         this.user_email = user_email;
     }
 

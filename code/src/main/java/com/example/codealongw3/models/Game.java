@@ -22,13 +22,13 @@ public class Game {
     @NotNull
     private String description;
 
-    @NotNull
+
     @Column(length = 1024)
     private String imageurl;
 
-    @NotNull
+
     private String developer;
-    @NotNull
+
     private String publisher;
 
     private String releaseDate;
@@ -48,22 +48,22 @@ public class Game {
     @NotNull
     private double price;
 
-    @NotNull
+
     private int amount;
 
-    @NotNull
+
     private String os;
 
-    @NotNull
+
     private String processor;
 
-    @NotNull
+
     private String memory;
 
-    @NotNull
+
     private String graphics;
 
-    @NotNull
+
     private String sound_card;
 
 
